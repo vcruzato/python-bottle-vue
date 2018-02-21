@@ -1,0 +1,19 @@
+<div id="modelResult">
+    <div>
+        <hr>
+        <h3>Customer Select</h3>
+        <select v-model="customerSelected" @change="getModelResult()">
+            <option v-for="val in customerList" v-bind:value="val.customer_id">${val.customer_name}</option>
+        </select>
+        <hr>
+    </div>
+    <div v-if="result">
+    <h3>Field Value List</h3>
+        <table>
+            <tr v-for="value in result">
+                <td style="width: 25px; text-align: center;">${value[0]}</td>
+                <td style="width: 150px; text-align: center;">${value[1]}</td>
+            </tr>
+        </table>
+    </div>
+</div>

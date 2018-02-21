@@ -1,0 +1,199 @@
+body{
+    font-family: Menlo, Consolas, monospace;
+    color: #444;
+    line-height: 1;
+    margin: 5px;
+    padding-left: 1px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid #ccc;
+}
+
+
+/*server title <small></small>*/
+h2 small {
+    font-size: 65%;
+    font-weight: 400;
+    color: #777;
+}
+
+/*tab services*/
+.date_time {
+    font-size: 90%;
+    font-weight: 400;
+    line-height: 1;
+    color: #777;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.boot_time {
+    font-size: 65%;
+    font-weight: 400;
+    color: #777;
+    letter-spacing: 0px;
+}
+
+.title_status{
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #4169E1;
+    margin-bottom: 10px;
+    line-height: 0.1;
+    display: block;
+}
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 4px 6px;
+    transition: 0.3s;
+    font-size: 100%;
+    letter-spacing: 0px;
+    color: #337ab7;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current taBlink class */
+div.tab button.active {
+    color: #d44950;
+    background-color: #eee;
+}
+
+/* Style the tabContent */
+.tab_content {
+    padding: 6px 12px;
+}
+
+/*INICIO BOOTSTRAP*/
+.alert {
+    font-size: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.alert-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.alert-clean {
+    color: #31708f;
+    background-color: #ffffff;
+    border-color: #bce8f1;
+}
+
+.label {
+    display: inline;
+    padding: 2px 5px;;
+    font-size: 100%;
+    /*font-weight: 400;*/
+    line-height: 2;
+    color: #fff;
+    text-align: center;
+    /*white-space: nowrap;*/
+    vertical-align: baseline;
+    border-radius: 2px;
+}
+
+.label-default {
+    background-color: #777;
+}
+
+.label-primary {
+    background-color: #337ab7;
+}
+
+.label-success {
+    background-color: #5cb85c;
+}
+
+.label-info {
+    background-color: #5bc0de;
+}
+
+.label-warning {
+    background-color: #f0ad4e;
+}
+
+.label-danger {
+    background-color: #d9534f;
+}
+/*FIM BOOTSTRAP*/
+
+.button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 2px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button-default {
+    background-color: #777;
+}
+
+.button-primary {
+    background-color: #337ab7;
+}
+
+.button-success {
+    background-color: #5cb85c;
+}
+
+.button-info {
+    background-color: #5bc0de;
+}
+
+.button-warning {
+    background-color: #f0ad4e;
+}
+
+.button-danger {
+    background-color: #d9534f;
+}

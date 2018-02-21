@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>"BriteCore"</title>
+        %include('header.html')
+    </head>
+
+    <body>
+
+        <div class="tab">
+            <button class="tab_link active" onclick="tabItem(event, 'tab1')">Registration</button>
+            <button class="tab_link" onclick="tabItem(event, 'tab2')">Customer</button>
+        </div>
+
+        <hr>
+
+        <div id="tab1" class="tab_content">
+            %include("tab1.html")
+        </div>
+
+        <div id="tab2" class="tab_content" style="display:none">
+            %include("tab2.html")
+        </div>
+
+        <script type="text/javascript">
+
+            function tabItem(evt, tabID) {
+                var i, tabContent, taBlinks;
+                tabContent = document.getElementsByClassName("tab_content");
+                for (i = 0; i < tabContent.length; i++) {
+                    tabContent[i].style.display = "none";
+                }
+                taBlinks = document.getElementsByClassName("tab_link");
+                for (i = 0; i < taBlinks.length; i++) {
+                    taBlinks[i].className = taBlinks[i].className.replace(" active", "");
+                }
+                document.getElementById(tabID).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+
+        </script>
+
+        <script type="text/javascript" src="/application.js"></script>
+    </body>
+</html>

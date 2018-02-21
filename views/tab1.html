@@ -1,0 +1,63 @@
+<div id="registerCustomer">
+    <h3>Register Customers</h3>
+    <div class="alert alert-danger" v-if="message">${message}</div>
+    <input v-model="customer">
+    <button class="button button-default" v-model="customer" @click="addCustomer()">Add</button>
+    <div v-if="customerList">
+        <hr>
+        <h3>Customer Select</h3>
+        <select v-model="customerSelected" @change="getType()">
+            <option v-for="val in customerList" v-bind:value="val.customer_id">${val.customer_name}</option>
+        </select>
+        <hr>
+    </div>
+    <div v-if="customerSelected">
+        <h3>Register Risk Type</h3>
+        <input v-model="riskType">
+        <button class="button button-default" v-model="riskType" @click="addType()">Add</button>
+        <hr>
+    </div>
+    <div v-if="riskTypeList">
+        <h3>Risk Select</h3>
+        <select v-model="riskSelected" @change="getField()">
+            <option v-for="val in riskTypeList" v-bind:value="val.typ_id">${val.typ_name}</option>
+        </select>
+        <hr>
+    </div>
+    <div v-if="riskSelected">
+        <h3>Register Field Risk</h3>
+        <input v-model="riskField">
+        <button class="button button-default" v-model="riskField" @click="addField()">Add</button>
+        <hr>
+    </div>
+    <div v-if="riskFieldList">
+        <h3>Risk Field List</h3>
+        <table>
+            <tr v-for="field in riskFieldList">
+                <td style="width: 25px; text-align: center;">${field.fld_id}</td>
+                <td style="width: 150px; text-align: center;">${field.fld_name}</td>
+            </tr>
+        </table>
+        <p>
+            <select v-model="fieldSelected" @change="getField()">
+                <option v-for="val in riskFieldList" v-bind:value="val.fld_id">${val.fld_name}</option>
+            </select>
+        </p>
+        <hr>
+    </div>
+    <div v-if="fieldSelected">
+        <h3>Register Field Value</h3>
+        ${fieldSelected} <input v-model="fieldValue">
+        <button class="button button-default" v-model="fieldValue" @click="addValue()">Add</button>
+        <hr>
+    </div>
+    <div v-if="fieldValueList">
+        <h3>Field Value List</h3>
+        <table>
+            <tr v-for="value in fieldValueList">
+                <td style="width: 25px; text-align: center;">${value.fdvl_id}</td>
+                <td style="width: 150px; text-align: center;">${value.fdvl_value}</td>
+            </tr>
+        </table>
+    </div>
+</div>
